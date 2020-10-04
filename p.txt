@@ -1,0 +1,16 @@
+<div class="container-content1">
+        <div class="card1"></div>
+        <div class="card1"></div>
+        <div class="card1"></div>
+    </div>
+
+    .card1{
+    margin: 15px;
+    color:black;
+    width: 250px;
+    height: 300px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.650);
+    background-color: white;
+}

@@ -1,0 +1,99 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style_1.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster" type="text/css">
+    <style>
+        .collapsible {
+          background-color: grey;
+          color: white;
+          cursor: pointer;
+          padding: 18px;
+          width: 100%;
+          border: none;
+          text-align: left;
+          outline: none;
+          font-size: 15px;
+        }
+        
+        .active, .collapsible:hover {
+          background-color: gray;
+        }
+        
+        .collapsible:after {
+          content: '\002B';
+          color: white;
+          font-weight: bold;
+          float: right;
+          margin-left: 5px;
+        }
+        
+        .active:after {
+          content: "\2212";
+        }
+        
+        .content {
+          padding: 0 18px;
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.2s ease-out;
+          background-color: #f1f1f1;
+        }
+        </style>
+</head>
+<body>
+    <div class="container">
+        <a href=""><div class="Logo">Course.U</div></a>
+        <div class="blank">
+            <input type="text" placeholder="Search..">
+        </div>
+        <a href="index.html"><div class="Home">Home</div></a>
+        <a href="faq.html"><div class="FAQ">FAQ</div></a>
+        <a href="login.html"><div class="Login">Login</div></a>
+    </div>
+    <div class="container-collapsible">
+        <div class="title-collapsible">
+            <h1>FAQ</h1>
+        </div>
+    </div>
+    <div class="container-collapsible">
+        <div class="center-content">
+            <button class="collapsible">Open Collapsible</button>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+
+            <button class="collapsible">Open Section 1</button>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <button class="collapsible">Open Section 2</button>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <button class="collapsible">Open Section 3</button>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+              content.style.maxHeight = null;
+            } else {
+              content.style.maxHeight = content.scrollHeight + "px";
+            } 
+          });
+        }
+        </script>
+</body>
+</html>
